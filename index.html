@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haziq Zaman | Backend & Applied AI Engineer</title>
+<meta name="description" content="Software engineer from Lahore building Python backends, full-stack apps and agentic AI systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e1a1c;--bg2:#142326;--line:#254044;--tx:#e4ede8;--mut:#8ea7a5;--sage:#9bd4b1;--sand:#e6c98a;--mist:#8db7d6;--slate:#58726f;--r:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.65 Figtree,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;line-height:1.12;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:14px}
+.lead{color:var(--mut);max-width:60ch;margin-bottom:36px}
+nav{position:sticky;top:0;z-index:20;background:#0e1a1ccc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-family:'Bricolage Grotesque';font-size:19px}
+nav div a{margin-left:22px;text-decoration:none;color:var(--mut);font-size:15px}
+nav div a:hover{color:var(--sage)}
+/* hero */
+.hero{min-height:calc(100vh - 60px);display:grid;align-items:center;padding:40px 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.pill{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-size:14px;color:var(--mut);margin-bottom:26px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--sage);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px #9bd4b100;box-shadow:0 0 0 7px #9bd4b133}}
+h1{font-size:clamp(40px,6.4vw,74px);margin-bottom:22px}
+.hero p b{color:var(--tx);font-weight:600}
+.hero p{color:var(--mut);max-width:50ch;font-size:19px}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:99px;text-decoration:none;font-weight:600;border:1px solid var(--line);transition:.2s}
+.btn.main{background:var(--sage);color:#0e1a1c;border-color:var(--sage)}
+.btn:hover{transform:translateY(-2px);border-color:var(--sage)}
+.hero .in>*{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .in>*:nth-child(2){animation-delay:.15s}.hero .in>*:nth-child(3){animation-delay:.3s}.hero .in>*:nth-child(4){animation-delay:.45s}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.atom{width:100%;max-width:460px;justify-self:center;overflow:visible}
+.atom .orb{fill:none;stroke:var(--line);stroke-width:1.4}
+.atom .nuc{animation:beat 3.2s ease-in-out infinite;transform-origin:0 0}
+@keyframes beat{50%{transform:scale(1.12)}}
+.atom text{font:500 15px Figtree,sans-serif;fill:#e4ede8;paint-order:stroke;stroke:#0e1a1c;stroke-width:4px;stroke-linejoin:round}
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.about p{color:var(--mut);margin-bottom:16px}
+.about p b{color:var(--tx);font-weight:500}
+.netbox{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:8px;position:relative}
+#net{width:100%;height:430px;display:block;cursor:crosshair}
+.cap{font-size:13.5px;color:var(--mut);padding:6px 14px 10px}
+.cap span{display:inline-block;width:9px;height:9px;border:1.5px solid var(--sand);border-radius:50%;margin:0 4px 0 2px}
+.cols{display:flex;justify-content:space-between;font-size:13px;color:var(--slate);padding:6px 24px 0}
+/* projects */
+.line{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;margin-bottom:28px}
+.belt{height:6px;border-radius:9px;margin:16px 0 20px;background:repeating-linear-gradient(90deg,var(--slate) 0 14px,transparent 14px 26px);animation:belt 1.2s linear infinite;opacity:.7}
+@keyframes belt{to{background-position:26px 0}}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.st div{font-size:14px;color:var(--mut)}
+.st strong{display:block;font:700 30px 'Bricolage Grotesque';color:var(--c)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.card{text-align:left;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:24px;color:inherit;font:inherit;cursor:pointer;transition:.25s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-4px);border-color:var(--c)}
+.card h3{font-size:22px}
+.card .idea{color:var(--c);font-size:14.5px;font-weight:600}
+.card p{color:var(--mut);font-size:15.5px;flex:1}
+.tag{font-size:13px;color:var(--c);display:flex;align-items:center;gap:8px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.mini{height:5px;background:#ffffff12;border-radius:9px;overflow:hidden}.mini i{display:block;height:100%;background:var(--c);border-radius:9px}
+.done{--c:var(--sage)}.doing{--c:var(--sand)}
+dialog{background:var(--bg2);color:var(--tx);border:1px solid var(--line);border-radius:22px;width:min(680px,92vw);max-height:90vh;padding:34px;margin:auto}
+dialog[open]{animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+dialog::backdrop{background:#050c0dcc;backdrop-filter:blur(5px)}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(16px)}}
+.x{float:right;background:none;border:1px solid var(--line);color:var(--tx);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px}
+dialog h3{font-size:30px;margin-bottom:6px}
+dialog h4{font:600 15px Figtree;color:var(--mut);margin:26px 0 10px}
+dialog p{color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:14px}
+.pct{display:flex;align-items:baseline;gap:12px}.pct b{font:700 44px 'Bricolage Grotesque';color:var(--c)}
+.seg{display:flex;height:12px;border-radius:9px;overflow:hidden;gap:3px;margin:8px 0 14px}
+.seg i{transition:width 1s cubic-bezier(.2,.8,.2,1);width:0}
+.mods{list-style:none;padding:0;display:grid;gap:6px}
+.mods li{display:flex;justify-content:space-between;font-size:15px;border-bottom:1px dashed var(--line);padding:6px 0}
+.s-d{color:var(--sage)}.s-p{color:var(--sand)}.s-q{color:var(--slate)}
+/* experience */
+.tl{position:relative;padding-left:44px}
+.tl::before{content:"";position:absolute;left:11px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--sage),var(--line))}
+.job{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:24px 28px;margin-bottom:22px}
+.job::before{content:"";position:absolute;left:-39px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--sage)}
+.job:first-child::before{background:var(--sage);box-shadow:0 0 0 6px #9bd4b122}
+.job .top{display:flex;justify-content:space-between;gap:4px 16px;flex-wrap:wrap}
+.job h3{font-size:21px}.job .org{color:var(--sage);font-size:15px}.job .when{color:var(--slate);font-size:14px}
+.job ul{list-style:none;padding:0;margin-top:14px;display:grid;gap:8px}
+.job li{color:var(--mut);font-size:15.5px;padding-left:20px;position:relative}
+.job li::before{content:"–";position:absolute;left:0;color:var(--sage)}
+/* connect */
+.connect{text-align:center;padding:120px 0 80px;border-top:1px solid var(--line)}
+.connect h2{font-size:clamp(34px,6vw,64px);max-width:16ch;margin:0 auto 20px}
+.connect p{color:var(--mut);max-width:48ch;margin:0 auto 34px}
+.nb{padding:7px 18px;font-size:14px;margin-left:12px;color:var(--tx)}
+.nb.main{color:#0e1a1c}
+.links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{text-align:center;color:var(--slate);font-size:14px;padding:40px 0 50px}
+@media(max-width:820px){.hero .wrap,.about{grid-template-columns:1fr}.atom{max-width:320px;order:-1}nav .lnk{display:none}section{padding:70px 0}.tbl td:first-child{white-space:normal}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero .in>*{opacity:1}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Haziq Zaman</b><div><a class="lnk" href="#about">About</a><a class="lnk" href="#projects">Projects</a><a class="lnk" href="#experience">Experience</a><a class="btn nb" href="resume.pdf" download>Resume</a><a class="btn nb main" href="#connect">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+ <div class="in">
+  <span class="pill"><i></i>Open to internships and junior roles</span>
+  <h1>I build the backend, then teach it to think.</h1>
+  <p>Software engineer building <b>retrieval-augmented generation systems</b>, computer-vision pipelines and <b>agentic AI applications</b>, where machine learning meets dependable backend engineering.</p>
+  <div class="btns"><a class="btn main" href="#projects">See what I've built</a><a class="btn" href="#connect">Contact me</a></div>
+ </div>
+ <svg class="atom" viewBox="-200 -200 400 400" role="img" aria-label="Animated atom: curiosity, dedication and ingenuity orbit a nucleus">
+  <defs><radialGradient id="g"><stop offset="0" stop-color="#e6c98a"/><stop offset="1" stop-color="#9bd4b1"/></radialGradient></defs>
+  <g><g><ellipse class="orb" rx="170" ry="62"/><g><animateMotion dur="8s" repeatCount="indefinite" path="M-170,0 a170,62 0 1,0 340,0 a170,62 0 1,0 -340,0"/><circle r="7" fill="#9bd4b1"/><text x="13" y="-11">Curiosity</text></g></g><g transform="rotate(60)"><ellipse class="orb" rx="170" ry="62"/><g><animateMotion dur="10s" repeatCount="indefinite" path="M-170,0 a170,62 0 1,0 340,0 a170,62 0 1,0 -340,0"/><circle r="7" fill="#8db7d6"/><text x="13" y="-11" transform="rotate(-60)">Dedication</text></g></g><g transform="rotate(120)"><ellipse class="orb" rx="170" ry="62"/><g><animateMotion dur="12s" repeatCount="indefinite" path="M-170,0 a170,62 0 1,0 340,0 a170,62 0 1,0 -340,0"/><circle r="7" fill="#e6c98a"/><text x="13" y="-11" transform="rotate(-120)">Ingenuity</text></g></g></g>
+  <circle class="nuc" r="30" fill="url(#g)"/><circle class="nuc" r="46" fill="none" stroke="#9bd4b155"/>
+ </svg>
+</div></header>
+
+<section id="about"><div class="wrap about">
+ <div>
+  <h2>How I think, drawn as a network</h2>
+  <p>I graduated in <b>BS Software Engineering</b> from Lahore Garrison University, and my final project, MedScan-AI, taught me the whole loop: train a model, wrap it in an API, put an interface on it.</p>
+  <p>Now I'm pointing that toward <b>backend and full-stack work with applied AI</b>, especially agents. I practice daily, and I'd rather tell you what I've shipped than what I've heard of.</p>
+  <p>The network on the right is my skill set. Languages feed tools, tools feed the things I can build.</p>
+ </div>
+ <div class="netbox"><div class="cols"><span>Languages</span><span>Tools and concepts</span><span>What I build</span></div><canvas id="net" aria-label="Neural network showing how my skills connect"></canvas><div class="cap"><span></span>Hollow nodes are what I'm building now. Hover a node to trace it. Click to fire a signal.</div></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <h2>Projects</h2>
+ <p class="lead">Each card opens with the full story, the stack, and how far along it is, module by module.</p>
+ <div class="line"><b>Production line</b><div class="belt"></div><div class="st" id="st"></div></div>
+ <div class="grid" id="grid"></div>
+</div></section>
+<dialog id="dlg" aria-label="Project details"></dialog>
+
+<section id="experience"><div class="wrap">
+ <h2>Experience</h2>
+ <p class="lead">Where I've studied and built so far. New roles get added at the top.</p>
+ <div class="tl" id="tl"></div>
+</div></section>
+
+<section class="connect" id="connect"><div class="wrap">
+ <h2>Let's build reliable software together.</h2>
+ <p>I'm open to internships, junior roles and collaborations in backend and applied AI. Send me a message and I'll reply promptly.</p>
+ <div class="links" id="links"></div>
+</div></section>
+<footer>Designed and built by Haziq Zaman</footer>
+
+<script>
+/* ===== EDIT THESE ===== */
+const LINKS=[["GitHub","https://github.com/HaziqZaman"],["LinkedIn","https://www.linkedin.com/in/haziq-zaman-947b57329/"],["Email","mailto:haziqzaman890@gmail.com"]];
+// modules: d = done, p = in progress, q = pending
+const PROJECTS=[
+{n:"MedScan-AI",s:"done",idea:"A tutor that explains what the model sees",short:"Histopathology learning platform with cancer detection, nuclei segmentation and a chatbot.",
+ long:"My final year project. Students upload histopathology images and get an IDC classification, a nuclei and mitosis segmentation, and a Grad-CAM heatmap showing where the model looked. A case-aware RAG chatbot answers questions from retrieved study material, using BM25 and MiniLM retrieval with a cross-encoder reranker. Measured results: 84.2% classification accuracy, 0.81 Dice for segmentation, and 92% grounded chatbot answers at about 1.8s latency. The backend exposes 18 REST endpoints across 7 route modules with JWT auth.",
+ t:["React","FastAPI","SQLAlchemy","PyTorch","ResNet-18","U-Net","Grad-CAM","BM25","MiniLM","Cross-encoder reranking","Gemini API"],
+ m:[["ResNet-18 IDC classifier","d"],["U-Net nuclei segmentation","d"],["Grad-CAM explainability","d"],["FastAPI backend, 18 endpoints","d"],["JWT auth and 4-table schema","d"],["React frontend","d"],["RAG chatbot (BM25 + vectors + rerank)","d"],["Cloud deployment","q"]]},
+{n:"Agentic AI Lab",s:"doing",idea:"An agent that picks its own tools",short:"A from-scratch tool-calling agent, then rebuilt with LangChain and LangGraph.",
+ long:"A standalone learning project: first a raw tool-calling loop with no framework so I understand what happens underneath, then the same agent with LangChain, then multi-step workflows in LangGraph, finishing as a small demo anyone can try.",
+ t:["Python","Gemini API","LangChain","LangGraph","Function calling"],
+ m:[["Core agent concepts","d"],["Raw tool-calling loop","p"],["LangChain agent","q"],["LangGraph multi-step flow","q"],["Public demo","q"]]},
+{n:"SDLC Quest",s:"done",idea:"Learn the software lifecycle by playing it",short:"A 3-level Unity quiz game that teaches the stages of the SDLC.",
+ long:"A 2D educational game for my Game Application Development course. Three levels of increasing difficulty, dialogue-driven teaching, and four C# manager scripts (Game, UI, Audio and Dialogue) that keep the code organised. Documented in full.",
+ t:["Unity 6","C#","Singleton pattern","2D game design"],
+ m:[["3 progressive levels","d"],["4 manager scripts","d"],["Dialogue system","d"],["Audio and UI","d"],["Documentation","d"]]},
+{n:"Food-Scape",s:"done",idea:"Find food near you on a map",short:"A web app for browsing food spots with live Google Maps.",
+ long:"A multi-page web app combining a PHP backend, AJAX for smooth updates, SQLite for data, and the Google Maps API so places appear on a real map.",
+ t:["HTML","CSS","Bootstrap","jQuery","PHP","AJAX","SQLite","Google Maps API"],
+ m:[["Responsive front end","d"],["PHP and AJAX backend","d"],["SQLite data layer","d"],["Google Maps integration","d"]]},
+{n:"Hotel Management System",s:"done",idea:"OOP, applied to rooms and guests",short:"A C++ system built around a four-tier room class hierarchy.",
+ long:"A console application that models a hotel with inheritance and polymorphism: four room tiers share a base class and override pricing and features.",
+ t:["C++","OOP","Inheritance","Polymorphism"],
+ m:[["Room class hierarchy","d"],["Booking logic","d"],["Billing","d"]]}
+];
+const EXP=[ // newest first. To add a role, copy one block and paste it at the TOP.
+{role:"Flutter Developer Intern",org:"Advantura Labs",when:"May-Jun 2025",pts:["Contributed to mobile app development in an Agile team.","Gained hands-on exposure to cross-functional collaboration and iterative delivery."]},
+{role:"BS Software Engineering",org:"Lahore Garrison University, Lahore",when:"Graduated 2022-2026",pts:["CGPA 3.27. Final year project: MedScan-AI, a full-stack medical AI platform.","Grade A in object-oriented programming, with strong foundations in C and Python."]}
+];
+/* ===== END EDIT ===== */
+
+const $=s=>document.querySelector(s);
+const pct=p=>{const d=p.m.filter(x=>x[1]=="d").length,i=p.m.filter(x=>x[1]=="p").length;return Math.round((d+i*.5)/p.m.length*100)};
+// links
+$("#links").innerHTML=LINKS.map((l,i)=>`<a class="btn ${i?"":"main"}" href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join("")+`<a class="btn" href="resume.pdf" download>Download resume</a>`;
+// production line
+const cnt={d:0,p:0,q:0};PROJECTS.forEach(p=>p.m.forEach(x=>cnt[x[1]]++));
+$("#st").innerHTML=`<div style="--c:var(--sage)"><strong>${cnt.d}</strong>modules shipped</div><div style="--c:var(--sand)"><strong>${cnt.p}</strong>on the line now</div><div style="--c:var(--slate)"><strong>${cnt.q}</strong>queued next</div>`;
+// cards
+$("#grid").innerHTML=PROJECTS.map((p,i)=>`<button class="card ${p.s}" data-i="${i}"><span class="tag"><i></i>${p.s=="done"?"Shipped":"In progress"}</span><h3>${p.n}</h3><span class="idea">${p.idea}</span><p>${p.short}</p><div class="mini"><i style="width:${pct(p)}%"></i></div></button>`).join("");
+const dlg=$("#dlg");
+$("#grid").onclick=e=>{const b=e.target.closest(".card");if(!b)return;const p=PROJECTS[b.dataset.i];
+ const c={d:0,p:0,q:0};p.m.forEach(x=>c[x[1]]++);const n=p.m.length,L={d:"Done",p:"In progress",q:"Pending"};
+ dlg.className=p.s;
+ dlg.innerHTML=`<button class="x" aria-label="Close" onclick="dlg.close()">✕</button><span class="tag"><i></i>${p.s=="done"?"Shipped":"In progress"}</span><h3>${p.n}</h3><p style="color:var(--c)">${p.idea}</p><h4>About</h4><p>${p.long}</p><h4>Tech stack</h4><div class="chips">${p.t.map(t=>`<span>${t}</span>`).join("")}</div><h4>Build progress</h4><div class="pct"><b>${pct(p)}%</b><span style="color:var(--mut)">${c.d} done, ${c.p} in progress, ${c.q} pending</span></div><div class="seg"><i style="background:var(--sage)" data-w="${c.d/n*100}"></i><i style="background:var(--sand)" data-w="${c.p/n*100}"></i><i style="background:var(--slate)" data-w="${c.q/n*100}"></i></div><ul class="mods">${p.m.map(x=>`<li><span>${x[0]}</span><span class="s-${x[1]}">${L[x[1]]}</span></li>`).join("")}</ul>`;
+ dlg.showModal();requestAnimationFrame(()=>requestAnimationFrame(()=>dlg.querySelectorAll(".seg i").forEach(i=>i.style.width=i.dataset.w+"%")));};
+dlg.onclick=e=>{if(e.target===dlg)dlg.close()};
+// experience timeline
+$("#tl").innerHTML=EXP.map(j=>`<article class="job"><div class="top"><h3>${j.role}</h3>${j.when?`<span class="when">${j.when}</span>`:""}</div><div class="org">${j.org}</div><ul>${j.pts.map(p=>`<li>${p}</li>`).join("")}</ul></article>`).join("");
+
+// neural network
+(()=>{
+const L=[["Python","C / C++","JavaScript","SQL","C#"],["FastAPI","React","SQLAlchemy","PyTorch","LangChain","RAG","Unity","OOP & SOLID"],["Backend APIs","Web apps","Medical AI","Agentic AI","Games"]];
+const E=[["Python","FastAPI"],["Python","SQLAlchemy"],["Python","PyTorch"],["Python","LangChain"],["Python","RAG"],["C / C++","OOP & SOLID"],["C#","OOP & SOLID"],["C#","Unity"],["JavaScript","React"],["SQL","SQLAlchemy"],["FastAPI","Backend APIs"],["SQLAlchemy","Backend APIs"],["OOP & SOLID","Backend APIs"],["React","Web apps"],["FastAPI","Web apps"],["PyTorch","Medical AI"],["RAG","Medical AI"],["RAG","Agentic AI"],["LangChain","Agentic AI"],["Unity","Games"]];
+const learning=["LangChain","Agentic AI"],cols=["#9bd4b1","#8db7d6","#e6c98a"];
+const cv=$("#net"),cx=cv.getContext("2d"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const N=[],byName={};L.forEach((l,li)=>l.forEach((n,j)=>{const o={n,li,j,k:l.length,glow:0,out:[],inn:[]};N.push(o);byName[n]=o}));
+const ED=E.map(([a,b])=>{const e={a:byName[a],b:byName[b]};e.a.out.push(e);e.b.inn.push(e);return e});
+let W,H,hov=null,pulses=[],tick=0;
+function size(){const d=devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);
+ N.forEach(o=>{o.x=W*[.27,.5,.73][o.li];o.y=H*(o.j+1)/(o.k+1)})}
+function fire(from){const path=[from];let c=from;while(c.out.length){c=c.out[Math.random()*c.out.length|0].b;path.push(c)}pulses.push({path,s:0,t:0})}
+function spawn(){fire(N[Math.random()*5|0])}
+function draw(){
+ cx.clearRect(0,0,W,H);
+ const hl=hov?new Set([hov,...hov.out.map(e=>e.b),...hov.inn.map(e=>e.a)]):null;
+ ED.forEach(e=>{const on=hov&&(e.a==hov||e.b==hov);cx.beginPath();cx.moveTo(e.a.x,e.a.y);cx.lineTo(e.b.x,e.b.y);cx.strokeStyle=on?"#9bd4b1":"#58726f";cx.globalAlpha=on?.9:hov?.12:.35;cx.lineWidth=on?1.8:1;cx.stroke()});
+ cx.globalAlpha=1;
+ pulses=pulses.filter(p=>{p.t+=.028;if(p.t>=1){p.t=0;p.s++;p.path[p.s].glow=1}if(p.s>=p.path.length-1)return false;
+  const a=p.path[p.s],b=p.path[p.s+1],x=a.x+(b.x-a.x)*p.t,y=a.y+(b.y-a.y)*p.t;
+  const g=cx.createRadialGradient(x,y,0,x,y,11);g.addColorStop(0,"#e6c98a");g.addColorStop(1,"#e6c98a00");cx.fillStyle=g;cx.beginPath();cx.arc(x,y,11,0,7);cx.fill();return true});
+ cx.font=(W<420?11:13)+"px Figtree,sans-serif";cx.textBaseline="middle";cx.lineJoin="round";
+ N.forEach(o=>{o.glow=Math.max(0,o.glow-.02);const dim=hl&&!hl.has(o),c=cols[o.li],r=6+o.glow*4+(o==hov?3:0);
+  cx.globalAlpha=dim?.25:1;
+  if(o.glow){cx.shadowColor=c;cx.shadowBlur=18*o.glow}
+  cx.beginPath();cx.arc(o.x,o.y,r,0,7);
+  if(learning.includes(o.n)){cx.strokeStyle="#e6c98a";cx.lineWidth=2;cx.stroke()}else{cx.fillStyle=c;cx.fill()}
+  cx.shadowBlur=0;
+  cx.textAlign=o.li==0?"right":o.li==2?"left":"center";const tx=o.li==0?o.x-14:o.li==2?o.x+14:o.x,ty=o.li==1?o.y-14:o.y;
+  cx.strokeStyle="#142326";cx.lineWidth=4;cx.strokeText(o.n,tx,ty);cx.fillStyle="#e4ede8";cx.fillText(o.n,tx,ty);cx.globalAlpha=1});
+}
+function loop(){tick++;if(tick%38==0&&pulses.length<6)spawn();draw();requestAnimationFrame(loop)}
+function pick(e){const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;return N.find(o=>Math.hypot(o.x-x,o.y-y)<18)||null}
+cv.onmousemove=e=>{hov=pick(e);if(still)draw()};cv.onmouseleave=()=>{hov=null;if(still)draw()};
+cv.onclick=e=>{const o=pick(e);if(!o)return;hov=o;o.glow=1;if(o.li==2){let s=[o],fw=o;while(s.length<3&&fw.inn.length){fw=fw.inn[Math.random()*fw.inn.length|0].a;s.unshift(fw)}pulses.push({path:s,s:0,t:0})}else fire(o)};
+addEventListener("resize",()=>{size();if(still)draw()});size();still?draw():loop();
+})();
+</script>
+</body>
+</html>
